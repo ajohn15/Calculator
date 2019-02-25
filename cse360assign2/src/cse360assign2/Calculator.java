@@ -1,19 +1,21 @@
 
 
+
 package cse360assign2;
 
 public class Calculator {
 
 	private int total;
 	private String history = "0";
+	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
 	
 	/**
-	 * Returns the total amount after calculations as an integer.
+	 * Returns the total amount as an integer after calculations.
 	 *  
-	 * @return integer total
+	 * @return total  : the computational total
 	 */
 	public int getTotal () {
 		return total;
@@ -23,7 +25,7 @@ public class Calculator {
 	 * Updates the private variable total by adding the value of the parameter.
 	 * Updates history by appending '+' sign and the parameter to the variable history
 	 * 
-	 * @param integer value to add to total
+	 * @param value : integer value to add to total
 	 */
 	public void add (int value) {
 		total = total + value;
@@ -34,7 +36,7 @@ public class Calculator {
 	 * Updates the private variable total by subtracting the value of the parameter.
 	 * Updates history by appending '-' sign and the parameter to the variable history 
 	 *  
-	 * @param integer value to subtract from the total
+	 * @param value : integer to subtract from the total
 	 */
 	public void subtract (int value) {
 		total = total - value;
@@ -46,7 +48,7 @@ public class Calculator {
 	 * parameter with the total variable. Updates history by appending '*' sign 
 	 * and the parameter to the variable history
 	 * 
-	 * @param integer value to multiply with total
+	 * @param value : integer to multiply with total
 	 */
 	public void multiply (int value) {
 		total = total*value;
@@ -58,7 +60,7 @@ public class Calculator {
 	 * the value of the parameter. Updates history by appending '/' sign 
 	 * and the parameter to the variable history.
 	 *  
-	 * @param integer value by which the total is divided
+	 * @param value : by which the total is divided
 	 */
 	public void divide (int value) {
 		if(value == 0)
@@ -76,7 +78,7 @@ public class Calculator {
 	 * Returns the history of the arithmetic done to the initial total value
 	 * in the form of +, -, * or / in between the integer parameters
 	 * 
-	 * @return String message of all previous arithmetic
+	 * @return history : String message of all previous arithmetic
 	 */
 	public String getHistory () {
 		return history;
